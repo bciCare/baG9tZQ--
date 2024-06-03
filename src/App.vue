@@ -5,29 +5,35 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-  <nav>
-    <RouterLink to="/login">Login</RouterLink>
+  <nav class="bordered-component">
+    <div id="return">
+      <RouterLink v-if="$route.name !== 'home'" class="routerlink" to="/"
+        >Home</RouterLink
+      >
+    </div>
+    <div id="socialsnlinks">
+      <div id="github">
+        <a href="https://github.com/blazi06/baG9tZQ--">
+          <img
+            height="25"
+            id="svg_github"
+            src="@/assets/images/github.svg"
+            width="25"
+          />
+        </a>
+      </div>
+      <RouterLink class="routerlink" to="/login">Login</RouterLink>
+    </div>
   </nav>
 
   <RouterView />
 
-  <footer>
+  <footer class="bordered-component">
     <div id="copyright">
-      <p>bCore, Copyright &copy; 2024</p>
-    </div>
-    <div id="socials">
-      <div id="github">
-        <a href="https://github.com/blazi06">
-          <img
-            src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png"
-            height="20px"
-            width="20px"
-          />
-        </a>
-      </div>
+      <p>&copy; 2024 bcore</p>
     </div>
     <div id="contact">
-      <a href="mailto:blaz@bcore.tech">Contact</a>
+      <a class="routerlink" href="mailto:blaz@bcore.tech">Contact</a>
     </div>
   </footer>
 </template>
@@ -36,31 +42,47 @@ import { RouterLink, RouterView } from 'vue-router'
 nav {
   display: flex;
   align-items: center;
-  justify-content: right;
-  padding: 5px 15px;
-  border-bottom: rgb(97, 97, 97) 1px dashed;
+  justify-content: space-between;
+  margin: 8px 12px;
+  padding: 1px 2px;
+  height: 35px;
 }
 
-nav a {
-  color: rgb(136, 136, 136);
+#socialsnlinks {
+  display: flex;
+  gap: 10px;
+}
+
+#socialsnlinks > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#socialsnlinks > div > a {
+  height: 25px;
+}
+
+.routerlink {
+  color: var(--color-text);
   text-decoration: none;
   padding: 2px 10px 2px 10px;
-  background: black;
 }
 
 footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 15px;
+  height: 35px;
+  margin: 8px 12px;
+  padding: 1px 2px;
 }
 
-#copyright {
+footer > div {
   width: 30%;
 }
 
 #contact {
   text-align: right;
-  width: 30%;
 }
 </style>

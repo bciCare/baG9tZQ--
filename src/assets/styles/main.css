@@ -13,3 +13,22 @@ main {
   align-items: center;
   flex-grow: 1;
 }
+
+.routerlink {
+  color: var(--color-text);
+  text-decoration: none;
+  padding: 2px 10px;
+  border: rgb(163, 163, 163) 2px solid;
+  border-radius: 5px;
+  margin: 1px 2px;
+}
+
+.bordered-component {
+  border: var(--color-border) 2px solid;
+  border-radius: 5px;
+  transition: all 0.3s ease-out;
+}
+
+.bordered-component:hover {
+  border: white 1px dashed;
+}
