@@ -30,5 +30,5 @@ main {
 }
 
 .bordered-component:hover {
-  border: white 1px solid;
+  border: var(--color-border-hover) 1px solid;
 }
