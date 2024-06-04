@@ -18,6 +18,7 @@ import { RouterLink, RouterView } from 'vue-router'
             height="25"
             id="svg_github"
             src="@/assets/images/github.svg"
+            alt="github logo"
             width="25"
           />
         </a>
